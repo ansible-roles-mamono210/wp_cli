@@ -37,6 +37,7 @@ Example Playbook
     - geerlingguy.repo-remi
     - mamono210.httpd_install
     - mamono210.php
+    - wp_cli
 ```
 
 License
