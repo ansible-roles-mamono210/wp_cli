@@ -1,0 +1,14 @@
+---
+dependencies: []
+galaxy_info:
+  author: mamono210
+  company:
+  description: WP-CIL installation for Linux.
+  galaxy_tags: []
+  license: "license (BSD, MIT)"
+  min_ansible_version: 5
+  role_name: wp_cli
+  platforms:
+    - name: EL
+      versions:
+        - 7

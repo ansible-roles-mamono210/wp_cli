@@ -1,0 +1,3 @@
+---
+# Working Directory
+wp_cli_working_dir: /tmp/wp_cli_install
