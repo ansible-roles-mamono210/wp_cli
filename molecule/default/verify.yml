@@ -3,6 +3,11 @@
   hosts: all
 
   tasks:
+    - name: Check whether PHP installed
+      ansible.builtin.command: php -v
+      register: php_installed
+      changed_when: false
+
     - name: Check whether WP-CLI installed
       ansible.builtin.command: |
         sudo -u apache /usr/local/bin/wp cli version
@@ -13,6 +18,10 @@
       ansible.builtin.command: cat /etc/redhat-release
       register: os_version
       changed_when: false
+
+    - name: Make sure PHP is installed
+      ansible.builtin.debug:
+        var: php_installed
 
     - name: Make sure WP-CLI is installed
       ansible.builtin.debug:
