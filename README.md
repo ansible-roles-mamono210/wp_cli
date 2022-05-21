@@ -3,7 +3,7 @@
 Role Description
 =========
 
-Installs [WP-CLI](https://wp-cli.org) for CentOS7.
+Installs [WP-CLI](https://wp-cli.org) for CentOS7/Stream8.
 
 Requirements
 ------------
