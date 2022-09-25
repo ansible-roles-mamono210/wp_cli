@@ -5,7 +5,7 @@
   vars:
     ansible_user: ansible
   roles:
-    - geerlingguy.repo-epel
+    - mamono210.epel
     - geerlingguy.repo-remi
     - mamono210.httpd_install
     - mamono210.php
