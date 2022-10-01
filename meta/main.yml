@@ -10,6 +10,6 @@ galaxy_info:
   role_name: wp_cli
   platforms:
     - name: EL
-      versions:
+      release:
         - 7
         - 8
