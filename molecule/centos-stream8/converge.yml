@@ -5,8 +5,4 @@
   vars:
     ansible_user: ansible
   roles:
-    - mamono210.epel
-    - mamono210.remi
-    - mamono210.httpd_install
-    - mamono210.php
     - wp_cli
