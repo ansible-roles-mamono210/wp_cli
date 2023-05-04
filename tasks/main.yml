@@ -34,4 +34,6 @@
     mv wp-cli.phar /usr/local/bin/wp
   args:
     chdir: '{{ wp_cli_working_dir }}'
+  register: wpcli_registered
+  changed_when: wpcli_registered.rc == 0
   when: wpcli_installed is failed
