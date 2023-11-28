@@ -15,7 +15,7 @@ provisioner:
     defaults:
       callbacks_enabled: ansible.posix.profile_tasks
   connection_options:
-    remi_repo: php:remi-8.1
+    remi_repo: php:remi-8.2
 verifier:
   name: ansible
 scenario:

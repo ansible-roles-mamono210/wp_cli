@@ -34,13 +34,13 @@ jobs:
             cd << parameters.checkout-path >>
 
             docker run --rm -it \
-            -e MOLECULE_IMAGE="ghcr.io/docker-images-mamono210/ansible-test/<< parameters.molecule-test-image >>:latest" \
+            -e MOLECULE_IMAGE="<< parameters.molecule-test-image >>" \
             -v "$(pwd)":/tmp/$(basename "${PWD}"):ro \
             -v /usr/bin/docker:/usr/bin/docker \
             -v /var/run/docker.sock:/var/run/docker.sock \
             -w /tmp/$(basename "${PWD}") \
             << parameters.molecule-executor-image >> \
-            molecule test --scenario-name << parameters.molecule-test-image >>
+            molecule test
       - run:
           name: Show Ansible version
           command: |
@@ -90,7 +90,7 @@ workflows:
               molecule-executor-image:
                 - 'ghcr.io/docker-images-mamono210/circleci-executors/molecule-docker:latest'
               molecule-test-image:
-                - 'centos7'
-                - 'centos-stream8'
+                - 'ghcr.io/docker-images-mamono210/ansible-test/centos-stream8:latest'
+                - 'ghcr.io/docker-images-mamono210/ansible-test/centos-stream9:latest'
           requires:
             - ansible-lint
